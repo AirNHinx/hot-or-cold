@@ -66,7 +66,7 @@ $(document).ready(function(){
   	var takeGuess = function(userGuess) {
   		var Guess = +$('#userGuess').val();
   		storedGuesses.push(guess);
-  		$('#guessList').append('<li>'storedGuesses[storedGuesses.length]'</li>')
+  		$('#guessList').append('<li>' + storedGuesses[storedGuesses.length] + '</li>')
  
   	}
 

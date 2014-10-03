@@ -42,12 +42,12 @@ $(document).ready(function(){
   	var storedGuesses = [];
 
   	$('#guessButton').click(function() {
-  		takeGuess();
+  		numCheck();
   	});
   	$('input#userGuess').on('keypress', function(event) {
   		if( event.which == 13) {
   			event.preventDefault();
-  			takeGuess();
+  			numCheck();
   		}
   	});
 

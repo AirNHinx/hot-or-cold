@@ -39,8 +39,6 @@ $(document).ready(function(){
  	console.log(randomNum);
 
   	/*--- Collect, Store, Count Guesses ---*/
-  	var storedGuesses = [];
-
   	$('#guessButton').click(function() {
   		numCheck();
   	});
@@ -51,8 +49,10 @@ $(document).ready(function(){
   		}
   	});
 
+  	var guess = +$('#userGuess').val();
+  	var storedGuesses = []; 
+
   	var numCheck = function() {
-  		var guess = +$('#userGuess').val();
   		console.log(guess);
   		if(isNaN(guess)) {
 			alert('Please Choose A Number')	
@@ -61,13 +61,13 @@ $(document).ready(function(){
 		} else {
 		takeGuess();
 		}
-	}; 
+	};
 
   	var takeGuess = function(userGuess) {
-  		var userGuess = +$('#userGuess').val();
-  		
-
-
+  		var Guess = +$('#userGuess').val();
+  		storedGuesses.push(guess);
+  		$('#guessList').append('<li>'storedGuesses[storedGuesses.length]'</li>')
+ 
   	}
 
 

@@ -44,7 +44,7 @@ $(document).ready(function(){
   	$('#guessButton').click(function() {
   		takeGuess();
   	});
-  	$('input#userGuess'.on('keypress', function(event) {
+  	$('input#userGuess').on('keypress', function(event) {
   		if( event.which == 13) {
   			event.preventDefault();
   			takeGuess();

@@ -3,6 +3,17 @@ $(document).ready(function(){
 
 	//newGame();
 
+	/*--- Display information modal box ---*/
+  	$(".what").click(function(){
+    	$(".overlay").fadeIn(1000);
+
+  	});
+  	/*--- Hide information modal box ---*/
+  	$("a.close").click(function(){
+  		$(".overlay").fadeOut(1000);
+  	});
+
+
 	/*--- Start New Game ---*/
 	var newGame = function() {
 		secretNumber();
@@ -18,17 +29,7 @@ $(document).ready(function(){
 		newGame();
 	});
 	
-	/*--- Display information modal box ---*/
-  	$(".what").click(function(){
-    	$(".overlay").fadeIn(1000);
-
-  	});
-
-  	/*--- Hide information modal box ---*/
-  	$("a.close").click(function(){
-  		$(".overlay").fadeOut(1000);
-  	});
-
+	
   	/*--- Secret Number ---*/
   	function secretNumber() {
   		randomNum = Math.ceil(Math.random()*100);
@@ -50,18 +51,17 @@ $(document).ready(function(){
   		}
   	});
 
-  	//function for making sure user enters a number
   	var numCheck = function() {
   		var userGuess = +$('#userGuess').val();
+  		console.log(userGuess);
   		if(isNaN(userGuess)) {
-		alert('Please Choose A Number')	
+			alert('Please Choose A Number')	
 		} else if (userGuess %1 !=0) {
-		alert('Please Choose A Whole Integer')
+			alert('Please Choose A Whole Integer')
 		} else {
 		takeGuess();
 		}
 	}; 
-
 
   	var takeGuess = function(userGuess) {
   		var userGuess = +$('#userGuess').val();

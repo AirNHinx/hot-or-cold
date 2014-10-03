@@ -18,8 +18,12 @@ $(document).ready(function(){
   	});
 
   	/*--- Secret Number ---*/
+  	function secretNumber() {
+  		randomNum = Math.ceil(Math.random()*100);
+  	};
 
-
+  	secretNumber();
+ 	console.log(randomNum);
 
   	/*--- Collect, Store, Count Guesses ---*/
 

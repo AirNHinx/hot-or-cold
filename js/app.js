@@ -52,11 +52,11 @@ $(document).ready(function(){
   	});
 
   	var numCheck = function() {
-  		var userGuess = +$('#userGuess').val();
-  		console.log(userGuess);
-  		if(isNaN(userGuess)) {
+  		var guess = +$('#userGuess').val();
+  		console.log(guess);
+  		if(isNaN(guess)) {
 			alert('Please Choose A Number')	
-		} else if (userGuess %1 !=0) {
+		} else if (guess %1 !=0) {
 			alert('Please Choose A Whole Integer')
 		} else {
 		takeGuess();

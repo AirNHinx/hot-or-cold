@@ -1,10 +1,22 @@
 
 $(document).ready(function(){
 
+	newGame();
+
 	/*--- Start New Game ---*/
 	var newGame = function() {
-
+		secretNumber();
+		console.log(randomNum);
+		storedGuesses = [];
+		$('#feedback').text('Make your Guess!');
+		$('#count').text(storedNumbers.length);
+		$('#guessList').find('li').remove();
+		$('form').show();
 	};
+
+	$('.new').click(function() {
+		newGame();
+	});
 	
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -26,7 +38,7 @@ $(document).ready(function(){
  	console.log(randomNum);
 
   	/*--- Collect, Store, Count Guesses ---*/
-
+  	var storedGuesses = [];
 
   		/*--- Display Guesses ---*/
 

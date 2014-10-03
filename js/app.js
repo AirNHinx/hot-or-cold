@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-	newGame();
+	//newGame();
 
 	/*--- Start New Game ---*/
 	var newGame = function() {

@@ -53,6 +53,7 @@ $(document).ready(function(){
   	var storedGuesses = []; 
 
   	var numCheck = function() {
+  		var guess = +$('#userGuess').val();
   		console.log(guess);
   		if(isNaN(guess)) {
 			alert('Please Choose A Number')	

@@ -59,18 +59,13 @@ $(document).ready(function(){
 			alert('Please Choose A Number')	
 		} else if (guess %1 !=0) {
 			alert('Please Choose A Whole Integer')
-		} else {
-		numValCheck();
-		}
-	};
-
-	var numValCheck = function() {
-		if (guess > 100) {
+		} else if (guess > 100) {
 			alert('Please Choose A Number between 1-100')
 		} else {
 			takeGuess();
 		}
-	}
+	};
+
 
   	var takeGuess = function(userGuess) {
   		var Guess = +$('#userGuess').val();

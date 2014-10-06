@@ -63,8 +63,8 @@ $(document).ready(function(){
 		}
 	};
 
-	var numValCheck = function(guess) {
-		if (.val() < 100) {
+	var numValCheck = function() {
+		if (guess < 100) {
 			alert('Please Choose A Number between 1-100')
 		} else {
 			takeGuess();

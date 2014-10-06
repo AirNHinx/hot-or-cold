@@ -70,7 +70,7 @@ $(document).ready(function(){
   	var takeGuess = function(userGuess) {
   		var Guess = +$('#userGuess').val();
   		storedGuesses.push(guess);
-  		$('#guessList').append('<li>' + storedGuesses[] + '</li>')
+  		$('#guessList').append('<li>' + storedGuesses + '</li>')
  		$('#count').text(storedGuesses.length);
  		console.log(storedGuesses);
   	}

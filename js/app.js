@@ -53,8 +53,19 @@ $(document).ready(function(){
   	var guess = +$('#userGuess').val();
   	var storedGuesses = []; 
 
-  	var numCheck = function() {
-  		var guess = +$('#userGuess').val();
+   var takeTurn = function() {
+   		var guess = +$('#userGuess').val();
+   		$(userGuess).val("");
+   		if (numCheck(guess)) {
+   			takeGuess(guess);
+   			determineTemp(guess);
+
+   		} 
+
+   }
+
+ 	var numCheck = function(guess) {
+  		//var guess = +$('#userGuess').val();
   		console.log(guess);
   		if(isNaN(guess)) {
 			alert('Please Choose A Number')	
@@ -63,24 +74,26 @@ $(document).ready(function(){
 		} else if (guess > 100) {
 			alert('Please Choose A Number between 1-100')
 		} else {
-			takeGuess();
-		}
+			return true;
+		} return false;
 	};
 
 
-  	var takeGuess = function(userGuess) {
-  		var guess = +$('#userGuess').val();
+  	var takeGuess = function(guess) {
   		storedGuesses.push(guess);
   		$('#guessList').append('<li>' + storedGuesses[ (storedGuesses.length -1) ] + '</li>');
  		$('#count').text(storedGuesses.length);
  		console.log(storedGuesses);
   	}
+	
+	var determineTemp = function(guess) {
+			console.log(guess);
+	}
 
-    /*--- Display Count ---*/
+
+ 
 
 
-
-  	/*--- Guess Temp---*/
 
 });
 

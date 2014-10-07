@@ -69,14 +69,14 @@ $(document).ready(function(){
 
 
   	var takeGuess = function(userGuess) {
-  		var Guess = +$('#userGuess').val();
+  		var guess = +$('#userGuess').val();
   		storedGuesses.push(guess);
   		$('#guessList').append('<li>' + storedGuesses[ (storedGuesses.length -1) ] + '</li>');
  		$('#count').text(storedGuesses.length);
  		console.log(storedGuesses);
   	}
 
-  		/*--- Display Count ---*/
+    /*--- Display Count ---*/
 
 
 

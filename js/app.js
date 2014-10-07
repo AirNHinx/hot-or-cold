@@ -20,7 +20,7 @@ $(document).ready(function(){
 		console.log(randomNum);
 		storedGuesses = [];
 		$('#feedback').text('Make your Guess!');
-		$('#count').text(storedNumbers.length);
+		$('#count').text(storedGuesses.length);
 		$('#guessList').find('li').remove();
 		$('form').show();
 	};
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
    		} 
 
-   }
+   };
 
  	var numCheck = function(guess) {
   		//var guess = +$('#userGuess').val();
@@ -84,11 +84,13 @@ $(document).ready(function(){
   		$('#guessList').append('<li>' + storedGuesses[ (storedGuesses.length -1) ] + '</li>');
  		$('#count').text(storedGuesses.length);
  		console.log(storedGuesses);
-  	}
+  	};
 	
 	var determineTemp = function(guess) {
 			console.log(guess);
-	}
+			if 
+	};
+
 
 
  

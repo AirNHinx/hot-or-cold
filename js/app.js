@@ -41,12 +41,12 @@ $(document).ready(function(){
   	/*--- Collect, Store, Count Guesses ---*/
   	$('#guessButton').click(function() {
   		event.preventDefault();
-  		numCheck();
+  		takeTurn();
   	});
   	$('input#userGuess').on('keypress', function(event) {
   		if( event.which == 13) {
   			event.preventDefault();
-  			numCheck();
+  			takeTurn();
   		}
   	});
 

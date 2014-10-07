@@ -40,6 +40,7 @@ $(document).ready(function(){
 
   	/*--- Collect, Store, Count Guesses ---*/
   	$('#guessButton').click(function() {
+  		event.preventDefault();
   		numCheck();
   	});
   	$('input#userGuess').on('keypress', function(event) {

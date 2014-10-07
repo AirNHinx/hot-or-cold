@@ -88,7 +88,6 @@ $(document).ready(function(){
 	
 	var determineTemp = function(guess) {
 			console.log(guess);
-			if 
 	};
 
 

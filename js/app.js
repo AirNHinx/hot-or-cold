@@ -87,21 +87,22 @@ $(document).ready(function(){
 	
 	var determineTemp = function(guess) {
 			//console.log(guess);
-			if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) >= 70) {
-				$('#feedback').text('Your guess is freezing cold!');
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) >= 50) {
-				$('#feedback').text('Your guess is cold!');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) >= 30) {
-				$('#feedback').text('Your guess is cool, like an autumn morning...');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) >= 20) {
-				$('#feedback').text('Your guess is warm, like a summer evening...');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) >= 10) {
-				$('#feedback').text('Your guess is hot!');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) <= 5) {
-				$('#feedback').text('Your guess is hot lava!');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) === 0) {
+			var difference = Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ])
+			if (difference === 0) {
 				$('#feedback').text('YES! You Guessed it!');
 				$('form').hide();	
+			} else if (difference <= 5) {
+				$('#feedback').text('Your guess is hot lava!');	
+			} else if (difference >= 10) {
+				$('#feedback').text('Your guess is hot!');	
+			} else if (difference >= 20) {
+				$('#feedback').text('Your guess is warm, like a summer evening...');	
+			} else if (difference >= 30) {
+				$('#feedback').text('Your guess is cool, like an autumn morning...');	
+			} else if (difference >= 50) {
+				$('#feedback').text('Your guess is cold!');
+			} else if (difference >= 70) {
+				$('#feedback').text('Your guess is freezing cold!');
 			}
 	};
 

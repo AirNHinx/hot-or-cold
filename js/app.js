@@ -93,15 +93,15 @@ $(document).ready(function(){
 				$('form').hide();	
 			} else if (difference <= 5) {
 				$('#feedback').text('Your guess is hot lava!');	
-			} else if (difference >= 10) {
+			} else if ((difference <= 10)&&(difference > 5)) {
 				$('#feedback').text('Your guess is hot!');	
-			} else if (difference >= 20) {
+			} else if ((difference <= 20)&&(difference > 10)) {
 				$('#feedback').text('Your guess is warm, like a summer evening...');	
-			} else if (difference >= 30) {
+			} else if ((difference <= 30)&&(difference > 20 )) {
 				$('#feedback').text('Your guess is cool, like an autumn morning...');	
-			} else if (difference >= 50) {
+			} else if ((difference <= 60)&&(difference > 30)) {
 				$('#feedback').text('Your guess is cold!');
-			} else if (difference >= 70) {
+			} else {
 				$('#feedback').text('Your guess is freezing cold!');
 			}
 	};

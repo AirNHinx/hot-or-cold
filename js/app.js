@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	/*--- Start New Game ---*/
 	var newGame = function() {
-		secretNumber();
+		randomNum = Math.ceil(Math.random()*100);
 		//console.log(randomNum);
 		storedGuesses = [];
 		$('#feedback').text('Make your Guess!');

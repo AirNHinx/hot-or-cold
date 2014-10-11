@@ -35,7 +35,7 @@ $(document).ready(function(){
   	};
 
   	secretNumber();
- 	//console.log(randomNum);
+ 	console.log(randomNum);
 
   	
   	$('#guessButton').click(function() {

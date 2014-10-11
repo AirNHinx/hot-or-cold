@@ -98,7 +98,7 @@ $(document).ready(function(){
 				$('#feedback').text('Your guess is warm, like a summer evening...');	
 			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) > 10) {
 				$('#feedback').text('Your guess is hot!');	
-			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) > 5) {
+			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) < 5) {
 				$('#feedback').text('Your guess is hot lava!');	
 			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) === 0) {
 				$('#feedback').text('YES! You Guessed it!');

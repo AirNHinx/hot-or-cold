@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 
-	//newGame();
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -17,7 +16,7 @@ $(document).ready(function(){
 	/*--- Start New Game ---*/
 	var newGame = function() {
 		secretNumber();
-		console.log(randomNum);
+		//console.log(randomNum);
 		storedGuesses = [];
 		$('#feedback').text('Make your Guess!');
 		$('#count').text(storedGuesses.length);
@@ -36,15 +35,15 @@ $(document).ready(function(){
   	};
 
   	secretNumber();
- 	console.log(randomNum);
+ 	//console.log(randomNum);
 
-  	/*--- Collect, Store, Count Guesses ---*/
+  	
   	$('#guessButton').click(function() {
   		event.preventDefault();
   		takeTurn();
   	});
   	$('input#userGuess').on('keypress', function(event) {
-  		if( event.which == 13) {
+  		if( event.which == 13 ) {
   			event.preventDefault();
   			takeTurn();
   		}
@@ -52,6 +51,7 @@ $(document).ready(function(){
 
   	var guess = +$('#userGuess').val();
   	var storedGuesses = []; 
+
 
    var takeTurn = function() {
    		var guess = +$('#userGuess').val();
@@ -65,8 +65,7 @@ $(document).ready(function(){
    };
 
  	var numCheck = function(guess) {
-  		//var guess = +$('#userGuess').val();
-  		console.log(guess);
+  		//console.log(guess);
   		if(isNaN(guess)) {
 			alert('Please Choose A Number')	
 		} else if (guess %1 !=0) {
@@ -83,11 +82,11 @@ $(document).ready(function(){
   		storedGuesses.push(guess);
   		$('#guessList').append('<li>' + storedGuesses[ (storedGuesses.length -1) ] + '</li>');
  		$('#count').text(storedGuesses.length);
- 		console.log(storedGuesses);
+ 		//console.log(storedGuesses);
   	};
 	
 	var determineTemp = function(guess) {
-			console.log(guess);
+			//console.log(guess);
 			if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) > 70) {
 				$('#feedback').text('Your guess is freezing cold!');
 			} else if (Math.abs(randomNum - storedGuesses[ (storedGuesses.length -1) ]) > 50) {
